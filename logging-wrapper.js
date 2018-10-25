@@ -2,7 +2,7 @@ var wrapLog = function (callback, name) {
   return function() {
     let args = [].slice.call(arguments);
     let result = callback.apply(null, args);
-    console.log(name + '(' + args.join(', ') + ') => ' + result);
+    console.log(`${name}(${args.join(', ')}) => ${result}`);
     return result;
   };
 };
